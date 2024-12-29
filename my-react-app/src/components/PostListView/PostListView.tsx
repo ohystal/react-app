@@ -1,4 +1,11 @@
-export default function Post(post) {
+import { FC } from "react";
+import { PostList } from "../../api/Post";
+
+export interface PostListView  {
+  postList: PostList
+}
+
+export const Post: FC<PostListView> = ({postList}) => {
   
   return (
     <div className="card">
